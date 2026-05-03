@@ -1,4 +1,4 @@
-import type { TrackType } from "@/timeline";
+import type { TrackType } from "@/model";
 
 export const TIMELINE_AUDIO_WAVEFORM_COLOR = "rgba(255, 255, 255, 0.7)";
 

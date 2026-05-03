@@ -14,13 +14,13 @@ import {
 	buildTimelineSnapPoints,
 	getTimelineSnapThresholdInTicks,
 	resolveTimelineSnap,
-	type SnapPoint,
+	type TimelineSnapPoint,
 } from "@/timeline/snapping";
 import { getBookmarkSnapPoints } from "../snap-source";
 import { getElementEdgeSnapPoints } from "@/timeline/element-snap-source";
 import { getPlayheadSnapPoints } from "@/timeline/playhead-snap-source";
 import { getAnimationKeyframeSnapPointsForTimeline } from "@/timeline/animation-snap-points";
-import type { Bookmark } from "@/timeline";
+import type { Bookmark } from "@/model";
 
 export interface BookmarkDragState {
 	isDragging: boolean;
@@ -38,7 +38,7 @@ interface UseBookmarkDragProps {
 	zoomLevel: number;
 	scrollRef: RefObject<HTMLElement | null>;
 	snappingEnabled: boolean;
-	onSnapPointChange?: (snapPoint: SnapPoint | null) => void;
+	onSnapPointChange?: (snapPoint: TimelineSnapPoint | null) => void;
 }
 
 export function useBookmarkDrag({
@@ -96,7 +96,7 @@ export function useBookmarkDrag({
 		}: {
 			rawTime: number;
 			excludeBookmarkTime: number;
-		}): { snappedTime: number; snapPoint: SnapPoint | null } => {
+		}): { snappedTime: number; snapPoint: TimelineSnapPoint | null } => {
 			const shouldSnap = snappingEnabled && !isShiftHeldRef.current;
 			if (!shouldSnap) {
 				return { snappedTime: rawTime, snapPoint: null };

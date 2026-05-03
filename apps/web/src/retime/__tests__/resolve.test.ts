@@ -5,7 +5,7 @@ import {
 	getSourceTimeAtClipTime,
 	getTimelineDurationForSourceSpan,
 } from "@/retime";
-import type { RetimeConfig } from "@/timeline";
+import type { RetimeConfig } from "@/model";
 
 const twoX: RetimeConfig = { rate: 2 };
 const halfX: RetimeConfig = { rate: 0.5 };

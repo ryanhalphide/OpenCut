@@ -1,4 +1,4 @@
-import type { SceneTracks, TimelineElement, TimelineTrack } from "@/timeline";
+import type { SceneTracks, TimelineElement, TimelineTrack } from "@/model";
 
 export function findTrackInSceneTracks({
 	tracks,

@@ -1,9 +1,9 @@
-import type { SceneTracks } from "@/timeline";
+import type { SceneTracks } from "@/model";
 import {
 	buildTimelineSnapPoints,
 	getTimelineSnapThresholdInTicks,
 	resolveTimelineSnap,
-	type SnapPoint,
+	type TimelineSnapPoint,
 } from "@/timeline/snapping";
 import { getElementEdgeSnapPoints } from "@/timeline/element-snap-source";
 import { getPlayheadSnapPoints } from "@/timeline/playhead-snap-source";
@@ -24,7 +24,7 @@ export function snapGroupEdges({
 	zoomLevel: number;
 }): {
 	snappedAnchorStartTime: number;
-	snapPoint: SnapPoint | null;
+	snapPoint: TimelineSnapPoint | null;
 } {
 	const excludeElementIds = new Set(
 		group.members.map((member) => member.elementId),
@@ -44,7 +44,7 @@ export function snapGroupEdges({
 
 	let closestSnapDistance = Infinity;
 	let snappedAnchorStartTime = anchorStartTime;
-	let snapPoint: SnapPoint | null = null;
+	let snapPoint: TimelineSnapPoint | null = null;
 
 	for (const member of group.members) {
 		const memberStartTime = anchorStartTime + member.timeOffset;

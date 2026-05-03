@@ -1,6 +1,6 @@
 import { PitchShifter } from "soundtouchjs";
 import { clampRetimeRate, shouldMaintainPitch } from "@/retime/rate";
-import type { RetimeConfig } from "@/timeline";
+import type { RetimeConfig } from "@/model";
 import { getSourceTimeAtClipTime } from "./resolve";
 
 const RATE_EPSILON = 1e-6;

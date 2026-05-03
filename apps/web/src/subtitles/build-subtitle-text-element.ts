@@ -6,7 +6,7 @@ import {
 } from "@/text/layout";
 import { DEFAULTS } from "@/timeline/defaults";
 import { TICKS_PER_SECOND } from "@/wasm";
-import type { CreateTextElement } from "@/timeline";
+import type { CreateTextElement } from "@/model";
 import type { SubtitleCue, SubtitleStyleOverrides } from "./types";
 
 const SUBTITLE_MAX_WIDTH_RATIO = 0.8;

@@ -11,7 +11,7 @@ import { parseColorToLinearRgba } from "@/animation/binding-values";
 import { isAnimationPropertyPath } from "@/animation/path";
 import { MIN_TRANSFORM_SCALE } from "@/animation/transform";
 import { snapToStep } from "@/utils/math";
-import type { TimelineElement } from "@/timeline";
+import type { TimelineElement } from "@/model";
 import {
 	CORNER_RADIUS_MAX,
 	CORNER_RADIUS_MIN,

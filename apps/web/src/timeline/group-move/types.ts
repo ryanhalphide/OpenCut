@@ -1,4 +1,4 @@
-import type { ElementRef, ElementType, TrackType } from "@/timeline";
+import type { ElementId, ElementRef, ElementType, TrackType } from "@/model";
 
 export type GroupTrackSection = "overlay" | "main" | "audio";
 
@@ -25,7 +25,7 @@ export interface PlannedTrackCreation {
 export interface PlannedElementMove {
 	sourceTrackId: string;
 	targetTrackId: string;
-	elementId: string;
+	elementId: ElementId;
 	newStartTime: number;
 }
 

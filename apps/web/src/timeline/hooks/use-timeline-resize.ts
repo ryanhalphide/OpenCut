@@ -9,13 +9,13 @@ import {
 	type ResizeConfig,
 } from "@/timeline/controllers/resize-controller";
 import type { ResizeSide } from "@/timeline/group-resize";
-import type { SnapPoint } from "@/timeline/snapping";
+import type { TimelineSnapPoint } from "@/timeline/snapping";
 
 export type { ResizeSide };
 
 interface UseTimelineResizeProps {
 	zoomLevel: number;
-	onSnapPointChange?: (snapPoint: SnapPoint | null) => void;
+	onSnapPointChange?: (snapPoint: TimelineSnapPoint | null) => void;
 }
 
 export function useTimelineResize({

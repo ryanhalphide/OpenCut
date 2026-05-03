@@ -6,7 +6,7 @@ import {
 } from "@/animation";
 import { Command, type CommandResult } from "@/commands/base-command";
 import type { KeyframeClipboardItem } from "@/clipboard";
-import type { SceneTracks, TimelineElement } from "@/timeline";
+import type { SceneTracks, TimelineElement } from "@/model";
 import { updateElementInSceneTracks } from "@/timeline";
 import { resolveAnimationTarget } from "@/timeline/animation-targets";
 import { generateUUID } from "@/utils/id";

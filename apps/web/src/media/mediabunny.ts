@@ -6,7 +6,7 @@ import {
 	type VideoCodec,
 } from "mediabunny";
 import { createTimelineAudioBuffer } from "@/media/audio";
-import type { SceneTracks } from "@/timeline";
+import type { SceneTracks } from "@/model";
 import type { MediaAsset } from "@/media/types";
 import { TICKS_PER_SECOND } from "@/wasm";
 import { renderThumbnailDataUrl } from "./thumbnail";

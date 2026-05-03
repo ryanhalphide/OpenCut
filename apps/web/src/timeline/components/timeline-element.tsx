@@ -31,14 +31,8 @@ import {
 	ContextMenuSeparator,
 	ContextMenuTrigger,
 } from "@/components/ui/context-menu";
-import type {
-	TimelineElement as TimelineElementType,
-	TimelineTrack,
-	ElementDragView,
-	VideoElement,
-	ImageElement,
-	AudioElement,
-} from "@/timeline";
+import type { AudioElement, ImageElement, TimelineElement as TimelineElementType, TimelineTrack, VideoElement } from "@/model";
+import type { ElementDragView } from "@/timeline";
 import type { MediaAsset } from "@/media/types";
 import { mediaSupportsAudio } from "@/media/media-utils";
 import {

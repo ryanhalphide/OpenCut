@@ -6,7 +6,7 @@ import { storageService } from "@/services/storage/service";
 import { videoCache } from "@/services/video-cache/service";
 import { waveformCache } from "@/services/waveform-cache/service";
 import { hasMediaId } from "@/timeline/element-utils";
-import type { SceneTracks } from "@/timeline";
+import type { SceneTracks } from "@/model";
 
 export class RemoveMediaAssetCommand extends Command {
 	private savedAssets: MediaAsset[] | null = null;

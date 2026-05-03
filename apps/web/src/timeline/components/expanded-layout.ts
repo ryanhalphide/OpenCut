@@ -2,7 +2,7 @@ import type {
 	AnimationPath,
 	ElementAnimations,
 } from "@/animation/types";
-import type { TimelineTrack } from "@/timeline";
+import type { TimelineTrack } from "@/model";
 import { getElementKeyframes } from "@/animation";
 import { KEYFRAME_LANE_HEIGHT_PX } from "./layout";
 

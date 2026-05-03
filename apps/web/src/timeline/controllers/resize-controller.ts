@@ -12,18 +12,14 @@ import {
 	buildTimelineSnapPoints,
 	getTimelineSnapThresholdInTicks,
 	resolveTimelineSnap,
-	type SnapPoint,
+	type TimelineSnapPoint,
 } from "@/timeline/snapping";
 import { getElementEdgeSnapPoints } from "@/timeline/element-snap-source";
 import { getPlayheadSnapPoints } from "@/timeline/playhead-snap-source";
 import { getAnimationKeyframeSnapPointsForTimeline } from "@/timeline/animation-snap-points";
-import {
-	isRetimableElement,
-	type SceneTracks,
-	type TimelineElement,
-	type TimelineTrack,
-} from "@/timeline";
-import type { ElementRef } from "@/timeline/types";
+import type { SceneTracks, TimelineElement, TimelineTrack } from "@/model";
+import { isRetimableElement } from "@/timeline";
+import type { ElementRef } from "@/model";
 import type { FrameRate } from "opencut-wasm";
 
 // --- Session ---
@@ -52,7 +48,7 @@ export interface ResizeConfig {
 	discardPreview: () => void;
 	previewElements: (updates: GroupResizeUpdate[]) => void;
 	commitElements: (updates: GroupResizeUpdate[]) => void;
-	onSnapPointChange?: (snapPoint: SnapPoint | null) => void;
+	onSnapPointChange?: (snapPoint: TimelineSnapPoint | null) => void;
 }
 
 export interface ResizeConfigRef {
@@ -262,7 +258,7 @@ export class ResizeController {
 		});
 		const maxSnapDistance = getTimelineSnapThresholdInTicks({ zoomLevel });
 
-		let closestSnapPoint: SnapPoint | null = null;
+		let closestSnapPoint: TimelineSnapPoint | null = null;
 		let closestSnapDistance = Infinity;
 		let deltaTicks = rawDeltaTicks;
 

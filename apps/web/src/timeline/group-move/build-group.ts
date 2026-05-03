@@ -1,4 +1,4 @@
-import type { ElementRef, SceneTracks } from "@/timeline";
+import type { ElementRef, SceneTracks } from "@/model";
 import { findTrackInSceneTracks } from "@/timeline/track-element-update";
 import type { GroupMember, MoveGroup } from "./types";
 import { getTrackPlacementById } from "./track-placement";

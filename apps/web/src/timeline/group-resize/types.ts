@@ -1,5 +1,5 @@
 import type { FrameRate } from "opencut-wasm";
-import type { ElementRef, RetimeConfig } from "@/timeline/types";
+import type { ElementRef, RetimeConfig } from "@/model";
 
 export type ResizeSide = "left" | "right";
 

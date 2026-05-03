@@ -14,11 +14,11 @@ import {
 } from "@/preview/element-bounds";
 import {
 	SNAP_THRESHOLD_SCREEN_PIXELS,
-	type SnapLine,
+	type PreviewSnapLine,
 } from "@/preview/preview-snap";
 import type { SelectedMaskPointSelection } from "@/selection/editor-selection";
 import type { Mask, MaskInteractionResult } from "@/masks/types";
-import type { MaskableElement } from "@/timeline";
+import type { MaskableElement } from "@/model";
 import { registerCanceller } from "@/editor/cancel-interaction";
 
 interface DragState {
@@ -94,7 +94,7 @@ function withUpdatedMaskParams<TMask extends Mask>({
 export function useMaskHandles({
 	onSnapLinesChange,
 }: {
-	onSnapLinesChange?: (lines: SnapLine[]) => void;
+	onSnapLinesChange?: (lines: PreviewSnapLine[]) => void;
 }) {
 	const editor = useEditor();
 	const isShiftHeldRef = useShiftKey();
@@ -552,7 +552,7 @@ export function useMaskHandles({
 				screenPixels: SNAP_THRESHOLD_SCREEN_PIXELS,
 			});
 			const { params: nextParams, activeLines } = isShiftHeldRef.current
-				? { params: proposedParams, activeLines: [] as SnapLine[] }
+				? { params: proposedParams, activeLines: [] as PreviewSnapLine[] }
 				: (def.interaction.snap?.({
 						handleId: drag.handleId,
 						startParams: drag.startParams,
@@ -560,7 +560,7 @@ export function useMaskHandles({
 						bounds: selectedWithMask.bounds,
 						canvasSize,
 						snapThreshold,
-					}) ?? { params: proposedParams, activeLines: [] as SnapLine[] });
+					}) ?? { params: proposedParams, activeLines: [] as PreviewSnapLine[] });
 
 			onSnapLinesChange?.(activeLines);
 

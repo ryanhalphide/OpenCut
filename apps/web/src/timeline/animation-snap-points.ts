@@ -1,6 +1,6 @@
 import { getElementKeyframes } from "@/animation";
-import type { SceneTracks } from "@/timeline";
-import type { SnapPoint } from "@/timeline/snapping";
+import type { SceneTracks } from "@/model";
+import type { TimelineSnapPoint } from "@/timeline/snapping";
 
 export function getAnimationKeyframeSnapPointsForTimeline({
 	tracks,
@@ -8,8 +8,8 @@ export function getAnimationKeyframeSnapPointsForTimeline({
 }: {
 	tracks: SceneTracks;
 	excludeElementIds?: Set<string>;
-}): SnapPoint[] {
-	const snapPoints: SnapPoint[] = [];
+}): TimelineSnapPoint[] {
+	const snapPoints: TimelineSnapPoint[] = [];
 	const orderedTracks = [...tracks.overlay, tracks.main, ...tracks.audio];
 
 	for (const track of orderedTracks) {

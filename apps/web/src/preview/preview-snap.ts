@@ -1,4 +1,4 @@
-export interface SnapLine {
+export interface PreviewSnapLine {
 	type: "horizontal" | "vertical";
 	position: number;
 }
@@ -8,9 +8,9 @@ const ROTATION_SNAP_THRESHOLD_DEGREES = 5;
 export const MIN_SCALE = 0.01;
 export const SNAP_THRESHOLD_SCREEN_PIXELS = 8;
 
-export interface SnapResult {
+export interface PreviewSnapResult {
 	snappedPosition: { x: number; y: number };
-	activeLines: SnapLine[];
+	activeLines: PreviewSnapLine[];
 }
 
 type ScaleEdge = "left" | "right" | "top" | "bottom";
@@ -78,7 +78,7 @@ export function snapPosition({
 	elementSize: { width: number; height: number };
 	rotation?: number;
 	snapThreshold: { x: number; y: number };
-}): SnapResult {
+}): PreviewSnapResult {
 	const centerX = 0;
 	const centerY = 0;
 	const left = -canvasSize.width / 2;
@@ -91,11 +91,11 @@ export function snapPosition({
 	const sinR = Math.abs(Math.sin(rotRad));
 	const halfWidth = (elementSize.width * cosR + elementSize.height * sinR) / 2;
 	const halfHeight = (elementSize.width * sinR + elementSize.height * cosR) / 2;
-	const activeLines: SnapLine[] = [];
+	const activeLines: PreviewSnapLine[] = [];
 
 	type AxisSnapCandidate = {
 		snappedPosition: number;
-		line: SnapLine;
+		line: PreviewSnapLine;
 		distance: number;
 	};
 
@@ -183,7 +183,7 @@ export function snapPosition({
 
 export interface ScaleSnapResult {
 	snappedScale: number;
-	activeLines: SnapLine[];
+	activeLines: PreviewSnapLine[];
 }
 
 export function snapScale({
@@ -226,7 +226,7 @@ export function snapScale({
 	interface SnapCandidate {
 		scale: number;
 		distance: number;
-		lines: SnapLine[];
+		lines: PreviewSnapLine[];
 		edge: ScaleEdge;
 	}
 
@@ -320,10 +320,10 @@ export function snapScale({
 	const snappedTop = position.y - aabbBaseHalfH * best.scale;
 	const snappedBottom = position.y + aabbBaseHalfH * best.scale;
 
-	const activeLines: SnapLine[] = [];
+	const activeLines: PreviewSnapLine[] = [];
 	const seenKeys = new Set<string>();
 
-	function addLine({ line }: { line: SnapLine }) {
+	function addLine({ line }: { line: PreviewSnapLine }) {
 		const key = `${line.type}-${line.position}`;
 		if (!seenKeys.has(key)) {
 			seenKeys.add(key);
@@ -368,7 +368,7 @@ export interface AxisSnapResult {
 	snappedScale: number;
 	/** Infinity when no snap candidate was within threshold */
 	snapDistance: number;
-	activeLines: SnapLine[];
+	activeLines: PreviewSnapLine[];
 }
 
 export function snapScaleAxes({
@@ -413,7 +413,7 @@ export function snapScaleAxes({
 	interface Candidate {
 		scale: number;
 		distance: number;
-		line: SnapLine;
+		line: PreviewSnapLine;
 		edge: ScaleEdge;
 	}
 
@@ -442,7 +442,7 @@ export function snapScaleAxes({
 
 	if (cosR > EPSILON) {
 		for (const T of [canvasLeft, 0, canvasRight]) {
-			const line: SnapLine = { type: "vertical", position: T };
+			const line: PreviewSnapLine = { type: "vertical", position: T };
 			const distLeft = Math.abs(currentLeftEdge - T);
 			if (distLeft <= snapThreshold.x) {
 				const scale = (2 * (position.x - T) - yContribW) / (baseWidth * cosR);
@@ -458,7 +458,7 @@ export function snapScaleAxes({
 
 	if (sinR > EPSILON) {
 		for (const T of [canvasTop, 0, canvasBottom]) {
-			const line: SnapLine = { type: "horizontal", position: T };
+			const line: PreviewSnapLine = { type: "horizontal", position: T };
 			const distTop = Math.abs(currentTopEdge - T);
 			if (distTop <= snapThreshold.y) {
 				const scale = (2 * (position.y - T) - yContribH) / (baseWidth * sinR);
@@ -480,7 +480,7 @@ export function snapScaleAxes({
 
 	if (sinR > EPSILON) {
 		for (const T of [canvasLeft, 0, canvasRight]) {
-			const line: SnapLine = { type: "vertical", position: T };
+			const line: PreviewSnapLine = { type: "vertical", position: T };
 			const distLeft = Math.abs(currentLeftEdge - T);
 			if (distLeft <= snapThreshold.x) {
 				const scale = (2 * (position.x - T) - xContribW) / (baseHeight * sinR);
@@ -496,7 +496,7 @@ export function snapScaleAxes({
 
 	if (cosR > EPSILON) {
 		for (const T of [canvasTop, 0, canvasBottom]) {
-			const line: SnapLine = { type: "horizontal", position: T };
+			const line: PreviewSnapLine = { type: "horizontal", position: T };
 			const distTop = Math.abs(currentTopEdge - T);
 			if (distTop <= snapThreshold.y) {
 				const scale = (2 * (position.y - T) - xContribH) / (baseHeight * cosR);

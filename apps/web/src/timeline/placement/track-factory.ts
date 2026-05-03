@@ -1,13 +1,5 @@
 import { DEFAULT_TRACK_NAMES } from "@/timeline/tracks";
-import type {
-	AudioTrack,
-	EffectTrack,
-	GraphicTrack,
-	TextTrack,
-	TrackType,
-	TimelineTrack,
-	VideoTrack,
-} from "@/timeline";
+import type { AudioTrack, EffectTrack, GraphicTrack, TextTrack, TimelineTrack, TrackType, VideoTrack } from "@/model";
 
 export function buildEmptyTrack({
 	id,

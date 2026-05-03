@@ -3,7 +3,12 @@ import {
 	createElementSelectionResult,
 	type CommandResult,
 } from "@/commands/base-command";
-import type { SceneTracks, TimelineElement } from "@/timeline";
+import {
+	elementId,
+	type ElementRef,
+	type SceneTracks,
+	type TimelineElement,
+} from "@/model";
 import { generateUUID } from "@/utils/id";
 import { EditorCore } from "@/core";
 import { isRetimableElement } from "@/timeline";
@@ -12,7 +17,7 @@ import { getSourceSpanAtClipTime } from "@/retime";
 
 export class SplitElementsCommand extends Command {
 	private savedState: SceneTracks | null = null;
-	private rightSideElements: { trackId: string; elementId: string }[] = [];
+	private rightSideElements: ElementRef[] = [];
 	private readonly elements: { trackId: string; elementId: string }[];
 	private readonly splitTime: number;
 	private readonly retainSide: "both" | "left" | "right";
@@ -32,7 +37,7 @@ export class SplitElementsCommand extends Command {
 		this.retainSide = retainSide;
 	}
 
-	getRightSideElements(): { trackId: string; elementId: string }[] {
+	getRightSideElements(): ElementRef[] {
 		return this.rightSideElements;
 	}
 
@@ -107,7 +112,7 @@ export class SplitElementsCommand extends Command {
 						},
 					];
 				} else if (this.retainSide === "right") {
-					const newId = generateUUID();
+					const newId = elementId(generateUUID());
 					this.rightSideElements.push({
 						trackId: track.id,
 						elementId: newId,
@@ -126,7 +131,7 @@ export class SplitElementsCommand extends Command {
 					];
 				} else {
 					// "both" - split into two pieces
-					const secondElementId = generateUUID();
+					const secondElementId = elementId(generateUUID());
 					this.rightSideElements.push({
 						trackId: track.id,
 						elementId: secondElementId,

@@ -1,4 +1,4 @@
-import type { TimelineElement } from "@/timeline";
+import type { TimelineElement } from "@/model";
 import type { PlacementTimeSpan } from "./types";
 
 interface TrackWithElements {

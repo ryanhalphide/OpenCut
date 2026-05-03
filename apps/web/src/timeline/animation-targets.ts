@@ -20,7 +20,7 @@ import {
 import { effectsRegistry, registerDefaultEffects } from "@/effects";
 import { getGraphicDefinition } from "@/graphics";
 import type { ParamDefinition } from "@/params";
-import type { TimelineElement } from "@/timeline";
+import type { TimelineElement } from "@/model";
 import { isVisualElement } from "@/timeline/element-utils";
 import { isAnimationPropertyPath } from "@/animation/path";
 import {

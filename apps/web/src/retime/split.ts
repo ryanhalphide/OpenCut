@@ -1,4 +1,4 @@
-import type { RetimeConfig } from "@/timeline";
+import type { RetimeConfig } from "@/model";
 import { getSourceTimeAtClipTime } from "./resolve";
 
 export function getSourceSpanAtClipTime({

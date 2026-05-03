@@ -13,7 +13,7 @@ import {
 	Delete02Icon,
 } from "@hugeicons/core-free-icons";
 import { HugeiconsIcon } from "@hugeicons/react";
-import type { Bookmark } from "@/timeline";
+import type { Bookmark } from "@/model";
 import {
 	Popover,
 	PopoverAnchor,

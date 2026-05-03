@@ -1,5 +1,6 @@
 import { useEditor } from "@/editor/use-editor";
-import { findTrackInSceneTracks, type TimelineElement } from "@/timeline";
+import type { TimelineElement } from "@/model";
+import { findTrackInSceneTracks } from "@/timeline";
 
 /**
  * Subscribes to render tracks and returns the live (preview-aware) version of

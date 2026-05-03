@@ -6,7 +6,7 @@ import {
 import { Command, type CommandResult } from "@/commands/base-command";
 import { updateElementInSceneTracks } from "@/timeline";
 import type { AnimationPath, AnimationValue } from "@/animation/types";
-import type { SceneTracks, TimelineElement } from "@/timeline";
+import type { SceneTracks, TimelineElement } from "@/model";
 import { resolveAnimationTarget } from "@/timeline/animation-targets";
 
 function removeKeyframeAndPersist({

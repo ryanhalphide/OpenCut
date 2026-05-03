@@ -2,7 +2,7 @@ import type { EditorCore } from "@/core";
 import type { Command, CommandResult } from "@/commands";
 import type { EditorSelectionSnapshot } from "@/selection/editor-selection";
 import { applyRippleAdjustments, computeRippleAdjustments } from "@/ripple";
-import type { SceneTracks } from "@/timeline/types";
+import type { SceneTracks } from "@/model";
 
 interface CommandHistoryEntry {
 	command: Command;

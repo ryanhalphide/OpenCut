@@ -21,7 +21,7 @@ import {
 	migrations,
 	runStorageMigrations,
 } from "@/services/storage/migrations";
-import type { Bookmark, SceneTracks, TScene } from "@/timeline";
+import type { Bookmark, SceneTracks, TScene } from "@/model";
 
 function normalizeBookmarks({ raw }: { raw: unknown }): Bookmark[] {
 	if (!Array.isArray(raw)) return [];

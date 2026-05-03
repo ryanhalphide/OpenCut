@@ -2,7 +2,7 @@ import { useEffect, useReducer, useRef } from "react";
 import { useEditor } from "@/editor/use-editor";
 import { useShiftKey } from "@/hooks/use-shift-key";
 import { usePreviewViewport } from "@/preview/components/preview-viewport";
-import type { SnapLine } from "@/preview/preview-snap";
+import type { PreviewSnapLine } from "@/preview/preview-snap";
 import { registerCanceller } from "@/editor/cancel-interaction";
 import {
 	PreviewInteractionController,
@@ -10,7 +10,7 @@ import {
 	type PreviewInteractionDepsRef,
 } from "@/preview/controllers/preview-interaction-controller";
 
-export type OnSnapLinesChange = (lines: SnapLine[]) => void;
+export type OnSnapLinesChange = (lines: PreviewSnapLine[]) => void;
 
 export function usePreviewInteraction({
 	onSnapLinesChange,

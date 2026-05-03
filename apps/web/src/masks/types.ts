@@ -1,5 +1,5 @@
 import type { ElementBounds } from "@/preview/element-bounds";
-import type { SnapLine } from "@/preview/preview-snap";
+import type { PreviewSnapLine } from "@/preview/preview-snap";
 import type { ParamDefinition } from "@/params";
 import type { CustomMaskPathPoint } from "@/masks/custom-path";
 import type {
@@ -261,7 +261,7 @@ export interface MaskSnapResult<
 	TParams extends BaseMaskParams = BaseMaskParams,
 > {
 	params: TParams;
-	activeLines: SnapLine[];
+	activeLines: PreviewSnapLine[];
 }
 
 export interface MaskInteractionResult {

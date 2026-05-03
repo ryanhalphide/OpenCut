@@ -1,9 +1,9 @@
 "use client";
 
 import { usePreviewViewport } from "@/preview/components/preview-viewport";
-import type { SnapLine } from "@/preview/preview-snap";
+import type { PreviewSnapLine } from "@/preview/preview-snap";
 
-export function SnapGuides({ lines }: { lines: SnapLine[] }) {
+export function SnapGuides({ lines }: { lines: PreviewSnapLine[] }) {
 	const viewport = usePreviewViewport();
 
 	if (lines.length === 0) {

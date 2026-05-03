@@ -10,7 +10,7 @@ import {
 } from "@/timeline/audio-display";
 import { VOLUME_DB_MAX, VOLUME_DB_MIN } from "@/timeline/audio-constants";
 import { hasAnimatedVolume } from "@/timeline/audio-state";
-import type { AudioElement } from "@/timeline/types";
+import type { AudioElement } from "@/model";
 import {
 	clamp,
 	formatNumberForDisplay,

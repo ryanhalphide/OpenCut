@@ -1,17 +1,5 @@
 import type { ReactNode } from "react";
-import type {
-	EffectElement,
-	GraphicElement,
-	ImageElement,
-	MaskableElement,
-	RetimableElement,
-	StickerElement,
-	TextElement,
-	VisualElement,
-	VideoElement,
-	AudioElement,
-	TimelineElement,
-} from "@/timeline";
+import type { AudioElement, EffectElement, GraphicElement, ImageElement, MaskableElement, RetimableElement, StickerElement, TextElement, TimelineElement, VideoElement, VisualElement } from "@/model";
 import type { MediaAsset } from "@/media/types";
 import { HugeiconsIcon } from "@hugeicons/react";
 import {

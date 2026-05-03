@@ -10,7 +10,7 @@ import {
 	isNearlyEqual,
 	snapToStep,
 } from "@/utils/math";
-import type { AudioElement, VideoElement } from "@/timeline";
+import type { AudioElement, VideoElement } from "@/model";
 import { resolveNumberAtTime } from "@/animation/values";
 import { useEditor } from "@/editor/use-editor";
 import { useElementPlayhead } from "@/components/editor/panels/properties/hooks/use-element-playhead";

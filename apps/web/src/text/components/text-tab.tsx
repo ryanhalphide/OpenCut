@@ -2,7 +2,7 @@
 
 import { Textarea } from "@/components/ui/textarea";
 import { FontPicker } from "@/components/ui/font-picker";
-import type { TextElement } from "@/timeline";
+import type { TextElement } from "@/model";
 import { NumberField } from "@/components/ui/number-field";
 import { useRef } from "react";
 import {

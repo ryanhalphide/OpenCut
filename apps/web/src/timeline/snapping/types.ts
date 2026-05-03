@@ -1,21 +1,21 @@
-export type SnapPointType =
+export type TimelineSnapPointType =
 	| "element-start"
 	| "element-end"
 	| "playhead"
 	| "bookmark"
 	| "keyframe";
 
-export interface SnapPoint {
+export interface TimelineSnapPoint {
 	time: number;
-	type: SnapPointType;
+	type: TimelineSnapPointType;
 	elementId?: string;
 	trackId?: string;
 }
 
-export interface SnapResult {
+export interface TimelineSnapResult {
 	snappedTime: number;
-	snapPoint: SnapPoint | null;
+	snapPoint: TimelineSnapPoint | null;
 	snapDistance: number;
 }
 
-export type TimelineSnapPointSource = () => Iterable<SnapPoint>;
+export type TimelineSnapPointSource = () => Iterable<TimelineSnapPoint>;

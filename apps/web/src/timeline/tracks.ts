@@ -1,4 +1,4 @@
-import type { TrackType } from "@/timeline";
+import type { TrackType } from "@/model";
 
 export const DEFAULT_TRACK_NAMES: Record<TrackType, string> = {
 	video: "Video track",

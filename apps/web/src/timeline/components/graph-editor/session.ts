@@ -14,7 +14,7 @@ import type {
 	ScalarGraphKeyframeContext,
 	SelectedKeyframeRef,
 } from "@/animation/types";
-import type { SceneTracks, TimelineElement } from "@/timeline";
+import type { SceneTracks, TimelineElement } from "@/model";
 
 const GRAPH_LINEAR_CURVE: NormalizedCubicBezier = [0, 0, 1, 1];
 const FLAT_VALUE_EPSILON = 1e-6;

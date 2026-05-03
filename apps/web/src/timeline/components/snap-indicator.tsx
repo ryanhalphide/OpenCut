@@ -1,14 +1,14 @@
 "use client";
 
 import { useSnapIndicatorPosition } from "@/timeline/hooks/use-snap-indicator-position";
-import type { SnapPoint } from "@/timeline/snapping";
+import type { TimelineSnapPoint } from "@/timeline/snapping";
 import {
 	getCenteredLineLeft,
 	TIMELINE_INDICATOR_LINE_WIDTH_PX,
 } from "@/timeline";
 import { TIMELINE_LAYERS } from "./layers";
 interface SnapIndicatorProps {
-	snapPoint: SnapPoint | null;
+	snapPoint: TimelineSnapPoint | null;
 	zoomLevel: number;
 	isVisible: boolean;
 	timelineRef: React.RefObject<HTMLDivElement | null>;

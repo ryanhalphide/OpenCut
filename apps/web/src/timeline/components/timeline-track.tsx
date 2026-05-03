@@ -2,8 +2,8 @@
 
 import { useElementSelection } from "@/timeline/hooks/element/use-element-selection";
 import { TimelineElement } from "./timeline-element";
-import type { TimelineTrack } from "@/timeline";
-import type { TimelineElement as TimelineElementType } from "@/timeline";
+import type { TimelineTrack } from "@/model";
+import type { TimelineElement as TimelineElementType } from "@/model";
 import { TIMELINE_LAYERS } from "./layers";
 import type { ElementDragView } from "@/timeline";
 

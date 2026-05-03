@@ -1,5 +1,5 @@
 import type { FrameRate } from "opencut-wasm";
-import type { TScene } from "@/timeline/types";
+import type { TScene } from "@/model";
 
 export type TBackground =
 	| {

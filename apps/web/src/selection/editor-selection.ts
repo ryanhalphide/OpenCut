@@ -1,5 +1,5 @@
 import type { SelectedKeyframeRef } from "@/animation/types";
-import type { ElementRef } from "@/timeline/types";
+import type { ElementRef } from "@/model";
 
 export interface SelectedMaskPointSelection {
 	trackId: string;

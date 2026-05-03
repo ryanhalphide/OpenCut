@@ -8,7 +8,7 @@ import {
 	type ElementInteractionDeps,
 	type ElementInteractionDepsRef,
 } from "@/timeline/controllers/element-interaction-controller";
-import type { SnapPoint } from "@/timeline/snapping";
+import type { TimelineSnapPoint } from "@/timeline/snapping";
 
 interface UseElementInteractionProps {
 	zoomLevel: number;
@@ -16,7 +16,7 @@ interface UseElementInteractionProps {
 	tracksScrollRef: RefObject<HTMLDivElement | null>;
 	headerRef?: RefObject<HTMLElement | null>;
 	snappingEnabled: boolean;
-	onSnapPointChange?: (snapPoint: SnapPoint | null) => void;
+	onSnapPointChange?: (snapPoint: TimelineSnapPoint | null) => void;
 }
 
 export function useElementInteraction({

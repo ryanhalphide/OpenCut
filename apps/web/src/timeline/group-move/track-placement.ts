@@ -1,4 +1,4 @@
-import type { SceneTracks, TimelineTrack } from "@/timeline";
+import type { SceneTracks, TimelineTrack } from "@/model";
 import type { GroupTrackSection } from "./types";
 
 export interface TrackPlacement {

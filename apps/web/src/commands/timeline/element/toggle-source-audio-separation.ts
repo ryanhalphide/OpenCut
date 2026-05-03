@@ -10,11 +10,12 @@ import {
 	resolveTrackPlacement,
 } from "@/timeline/placement";
 import { updateElementInSceneTracks } from "@/timeline/track-element-update";
-import type {
-	SceneTracks,
-	TimelineElement,
-	VideoElement,
-} from "@/timeline/types";
+import {
+	elementId,
+	type SceneTracks,
+	type TimelineElement,
+	type VideoElement,
+} from "@/model";
 import { generateUUID } from "@/utils/id";
 
 export class ToggleSourceAudioSeparationCommand extends Command {
@@ -75,7 +76,7 @@ export class ToggleSourceAudioSeparationCommand extends Command {
 			...buildSeparatedAudioElement({
 				sourceElement: videoElement,
 			}),
-			id: generateUUID(),
+			id: elementId(generateUUID()),
 		};
 		const placementResult = resolveTrackPlacement({
 			tracks: this.savedState,

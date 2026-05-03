@@ -1,6 +1,6 @@
 import { Command, type CommandResult } from "@/commands/base-command";
 import { EditorCore } from "@/core";
-import type { TScene } from "@/timeline";
+import type { TScene } from "@/model";
 import { canDeleteScene, getFallbackSceneAfterDelete } from "@/timeline/scenes";
 
 export class DeleteSceneCommand extends Command {

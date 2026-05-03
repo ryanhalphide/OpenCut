@@ -6,7 +6,7 @@ import {
 	snapScale,
 	snapScaleAxes,
 	type ScaleEdgePreference,
-	type SnapLine,
+	type PreviewSnapLine,
 } from "@/preview/preview-snap";
 import type { RectangleMaskParams, SplitMaskParams } from "@/masks/types";
 import {
@@ -20,7 +20,7 @@ type SharedMaskParams = SplitMaskParams | RectangleMaskParams;
 
 type MaskSnapResult<TParams extends SharedMaskParams> = {
 	params: TParams;
-	activeLines: SnapLine[];
+	activeLines: PreviewSnapLine[];
 };
 
 const CORNER_SIZE_HANDLES = new Set([

@@ -1,7 +1,7 @@
 "use client";
 
 import { getSourceTimeAtClipTime } from "@/retime";
-import type { RetimeConfig } from "@/timeline";
+import type { RetimeConfig } from "@/model";
 
 const RMS_ANALYSIS_WINDOW_SECONDS = 0.02;
 const DEFAULT_SOURCE_WAVEFORM_BUCKET_SIZE = 128;

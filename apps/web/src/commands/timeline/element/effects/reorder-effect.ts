@@ -1,7 +1,7 @@
 import { Command, type CommandResult } from "@/commands/base-command";
 import { EditorCore } from "@/core";
 import { isVisualElement, updateElementInSceneTracks } from "@/timeline";
-import type { SceneTracks, VisualElement } from "@/timeline";
+import type { SceneTracks, VisualElement } from "@/model";
 
 function reorderEffectsOnElement({
 	element,

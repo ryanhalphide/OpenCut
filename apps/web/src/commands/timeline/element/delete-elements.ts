@@ -1,7 +1,7 @@
 import { Command, type CommandResult } from "@/commands/base-command";
-import type { SceneTracks } from "@/timeline";
+import type { SceneTracks } from "@/model";
 import { EditorCore } from "@/core";
-import type { TimelineTrack } from "@/timeline";
+import type { TimelineTrack } from "@/model";
 
 function removeTrackElements<TTrack extends TimelineTrack>({
 	track,

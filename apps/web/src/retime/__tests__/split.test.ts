@@ -3,7 +3,7 @@ import {
 	getSourceSpanAtClipTime,
 	splitRetimeAtClipTime,
 } from "@/retime";
-import type { RetimeConfig } from "@/timeline";
+import type { RetimeConfig } from "@/model";
 
 describe("retime split", () => {
 	test("measures source span at a clip time", () => {

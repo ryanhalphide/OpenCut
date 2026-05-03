@@ -1,4 +1,4 @@
-import type { SceneTracks, TrackType } from "@/timeline";
+import type { SceneTracks, TrackType } from "@/model";
 
 export function getDefaultInsertIndexForTrack({
 	tracks,

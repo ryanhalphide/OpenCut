@@ -1,4 +1,4 @@
-import type { Bookmark } from "@/timeline";
+import type { Bookmark } from "@/model";
 import type { FrameRate } from "opencut-wasm";
 import { roundToFrame } from "opencut-wasm";
 

@@ -1,6 +1,6 @@
 "use client";
 
-import type { MaskableElement } from "@/timeline";
+import type { MaskableElement } from "@/model";
 import type { Mask, MaskType, TextMask } from "@/masks/types";
 import type { NumberParamDefinition, SelectParamDefinition } from "@/params";
 import { masksRegistry, buildDefaultMaskInstance } from "@/masks";

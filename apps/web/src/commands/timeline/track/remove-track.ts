@@ -1,6 +1,6 @@
 import { Command, type CommandResult } from "@/commands/base-command";
 import { EditorCore } from "@/core";
-import type { SceneTracks } from "@/timeline";
+import type { SceneTracks } from "@/model";
 
 export class RemoveTrackCommand extends Command {
 	private savedState: SceneTracks | null = null;

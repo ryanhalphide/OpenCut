@@ -19,14 +19,8 @@ import { BatchCommand } from "@/commands";
 import type { Command } from "@/commands/base-command";
 import { computeDropTarget } from "@/timeline/components/drop-target";
 import type { TimelineDragSource } from "@/timeline/drag-source";
-import type {
-	TrackType,
-	DropTarget,
-	ElementType,
-	SceneTracks,
-	TimelineTrack,
-	CreateTimelineElement,
-} from "@/timeline";
+import type { CreateTimelineElement, ElementType, SceneTracks, TimelineTrack, TrackType } from "@/model";
+import type { DropTarget } from "@/timeline";
 import type { TimelineDragData } from "@/timeline/drag";
 import type { MediaAsset } from "@/media/types";
 import type { ProcessedMediaAsset } from "@/media/processing";

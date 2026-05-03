@@ -8,7 +8,7 @@ import { getKeyframeById } from "@/animation";
 import { RetimeKeyframeCommand } from "@/commands/timeline/element/keyframes/retime-keyframe";
 import { BatchCommand } from "@/commands";
 import type { SelectedKeyframeRef } from "@/animation/types";
-import type { TimelineElement } from "@/timeline";
+import type { TimelineElement } from "@/model";
 import type { Command } from "@/commands/base-command";
 
 // --- Session ---

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { usePreviewViewport } from "@/preview/components/preview-viewport";
 import { usePreviewInteraction } from "@/preview/hooks/use-preview-interaction";
-import type { SnapLine } from "@/preview/preview-snap";
+import type { PreviewSnapLine } from "@/preview/preview-snap";
 import { TransformHandles } from "./transform-handles";
 import { MaskHandles } from "./mask-handles";
 import { SnapGuides } from "./snap-guides";
@@ -10,7 +10,7 @@ import { usePropertiesStore } from "@/components/editor/panels/properties/stores
 import { useEditor } from "@/editor/use-editor";
 
 export function PreviewInteractionOverlay() {
-	const [snapLines, setSnapLines] = useState<SnapLine[]>([]);
+	const [snapLines, setSnapLines] = useState<PreviewSnapLine[]>([]);
 	const editor = useEditor();
 	const viewport = usePreviewViewport();
 	const selectedElements = useEditor((e) => e.selection.getSelectedElements());

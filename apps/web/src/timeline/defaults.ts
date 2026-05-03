@@ -1,7 +1,7 @@
 import { DEFAULT_NEW_ELEMENT_DURATION } from "@/timeline/creation";
 import type { TTimelineViewState } from "@/project/types";
 import type { BlendMode, Transform } from "@/rendering";
-import type { TextElement } from "./types";
+import type { TextElement } from "@/model";
 
 const defaultTransform: Transform = {
 	scaleX: 1,

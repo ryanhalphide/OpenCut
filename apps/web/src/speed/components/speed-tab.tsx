@@ -12,7 +12,7 @@ import {
 	clampRetimeRate,
 	canMaintainPitch,
 } from "@/retime/rate";
-import type { AudioElement, VideoElement } from "@/timeline";
+import type { AudioElement, VideoElement } from "@/model";
 import {
 	Section,
 	SectionContent,

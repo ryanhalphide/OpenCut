@@ -4,7 +4,7 @@ import { insertPointOnCustomMaskSegment } from "@/masks/definitions/custom";
 import type { ElementBounds } from "@/preview/element-bounds";
 import type { CustomMask } from "@/masks/types";
 import { isMaskableElement, updateElementInSceneTracks } from "@/timeline";
-import type { MaskableElement, SceneTracks } from "@/timeline";
+import type { MaskableElement, SceneTracks } from "@/model";
 
 function insertPointIntoCustomMask({
 	mask,

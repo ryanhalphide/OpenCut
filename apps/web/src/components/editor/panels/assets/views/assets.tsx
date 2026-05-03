@@ -45,7 +45,7 @@ import {
 	type MediaViewMode,
 	useAssetsPanelStore,
 } from "@/components/editor/panels/assets/assets-panel-store";
-import { MASKABLE_ELEMENT_TYPES } from "@/timeline";
+import { MASKABLE_ELEMENT_TYPES } from "@/model";
 import type { MediaAsset } from "@/media/types";
 import { cn } from "@/utils/ui";
 import {

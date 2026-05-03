@@ -1,4 +1,4 @@
-import type { SceneTracks, TimelineTrack } from "@/timeline/types";
+import type { SceneTracks, TimelineTrack } from "@/model";
 import { rippleShiftElements } from "./shift";
 
 export interface RippleAdjustment {

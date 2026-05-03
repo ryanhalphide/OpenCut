@@ -15,7 +15,7 @@ import {
 	timelineTimeToSnappedPixels,
 } from "@/timeline";
 import { BASE_TIMELINE_PIXELS_PER_SECOND } from "@/timeline/scale";
-import type { Bookmark, SceneTracks } from "@/timeline";
+import type { Bookmark, SceneTracks } from "@/model";
 
 // --- Session ---
 

@@ -1,4 +1,4 @@
-import type { TextBackground, TextElement } from "@/timeline";
+import type { TextBackground, TextElement } from "@/model";
 import { DEFAULTS } from "@/timeline/defaults";
 
 type TextRect = {

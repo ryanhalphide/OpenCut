@@ -8,7 +8,7 @@ import {
 	sampleSourceWaveformSummary,
 	type SourceWaveformSummary,
 } from "@/media/waveform-summary";
-import type { RetimeConfig } from "@/timeline";
+import type { RetimeConfig } from "@/model";
 import { getBarFractionFromOutputAmplitude } from "@/timeline/audio-display";
 import { waveformCache } from "@/services/waveform-cache/service";
 import { findScrollParent } from "@/utils/browser";

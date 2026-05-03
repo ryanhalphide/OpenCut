@@ -9,7 +9,7 @@ import type {
 	AnimationPath,
 	ScalarCurveKeyframePatch,
 } from "@/animation/types";
-import type { SceneTracks } from "@/timeline";
+import type { SceneTracks } from "@/model";
 
 export class UpdateScalarKeyframeCurveCommand extends Command {
 	private savedState: SceneTracks | null = null;

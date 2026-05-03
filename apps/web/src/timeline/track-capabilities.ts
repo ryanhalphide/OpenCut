@@ -1,11 +1,4 @@
-import type {
-	TimelineTrack,
-	VideoTrack,
-	AudioTrack,
-	GraphicTrack,
-	TextTrack,
-	EffectTrack,
-} from "@/timeline";
+import type { AudioTrack, EffectTrack, GraphicTrack, TextTrack, TimelineTrack, VideoTrack } from "@/model";
 
 export function canTrackHaveAudio(
 	track: TimelineTrack,

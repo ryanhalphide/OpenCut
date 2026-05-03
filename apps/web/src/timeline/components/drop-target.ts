@@ -1,4 +1,4 @@
-import type { TimelineTrack, TimelineElement } from "@/timeline";
+import type { TimelineElement, TimelineTrack } from "@/model";
 import type { ComputeDropTargetParams, DropTarget } from "@/timeline";
 import { resolveTrackPlacement } from "@/timeline/placement";
 import { TIMELINE_TRACK_GAP_PX } from "./layout";

@@ -3,7 +3,7 @@
 import { PEN_CURSOR } from "@/preview/components/cursors";
 import { usePreviewViewport } from "@/preview/components/preview-viewport";
 import { useMaskHandles } from "@/masks/use-mask-handles";
-import type { SnapLine } from "@/preview/preview-snap";
+import type { PreviewSnapLine } from "@/preview/preview-snap";
 import {
 	CornerHandle,
 	CircleHandle,
@@ -22,7 +22,7 @@ import { Rotate01Icon, FeatherIcon } from "@hugeicons/core-free-icons";
 export function MaskHandles({
 	onSnapLinesChange,
 }: {
-	onSnapLinesChange?: (lines: SnapLine[]) => void;
+	onSnapLinesChange?: (lines: PreviewSnapLine[]) => void;
 }) {
 	const viewport = usePreviewViewport();
 	const {

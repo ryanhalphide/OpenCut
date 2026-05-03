@@ -1,6 +1,6 @@
 import { getKeyframeById } from "@/animation";
 import type { SelectedKeyframeRef } from "@/animation/types";
-import type { TimelineElement } from "@/timeline";
+import { elementId, type ElementRef, type TimelineElement } from "@/model";
 import { PasteKeyframesCommand } from "@/commands/timeline";
 import type {
 	ClipboardHandler,
@@ -12,7 +12,7 @@ function resolveSingleSourceElement({
 	selectedKeyframes,
 }: {
 	selectedKeyframes: SelectedKeyframeRef[];
-}) {
+}): ElementRef | null {
 	const firstKeyframe = selectedKeyframes[0];
 	if (!firstKeyframe) {
 		return null;
@@ -20,7 +20,7 @@ function resolveSingleSourceElement({
 
 	const sourceElement = {
 		trackId: firstKeyframe.trackId,
-		elementId: firstKeyframe.elementId,
+		elementId: elementId(firstKeyframe.elementId),
 	};
 	const isSingleSource = selectedKeyframes.every(
 		(keyframe) =>

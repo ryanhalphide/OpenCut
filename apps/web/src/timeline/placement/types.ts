@@ -1,4 +1,4 @@
-import type { ElementType, TrackType } from "@/timeline";
+import type { ElementType, TrackType } from "@/model";
 
 export interface PlacementTimeSpan {
 	startTime: number;

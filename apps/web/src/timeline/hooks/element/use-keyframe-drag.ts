@@ -7,7 +7,7 @@ import {
 	type KeyframeDragConfig,
 	type KeyframeDragState,
 } from "@/timeline/controllers/keyframe-drag-controller";
-import type { TimelineElement } from "@/timeline";
+import type { TimelineElement } from "@/model";
 
 export type { KeyframeDragState };
 

@@ -1,28 +1,6 @@
 import { DEFAULT_NEW_ELEMENT_DURATION } from "@/timeline/creation";
-import {
-	MASKABLE_ELEMENT_TYPES,
-	RETIMABLE_ELEMENT_TYPES,
-	VISUAL_ELEMENT_TYPES,
-	type CreateEffectElement,
-	type CreateGraphicElement,
-	type CreateTimelineElement,
-	type CreateVideoElement,
-	type CreateImageElement,
-	type CreateStickerElement,
-	type CreateUploadAudioElement,
-	type CreateLibraryAudioElement,
-	type TextBackground,
-	type TextElement,
-	type SceneTracks,
-	type TimelineElement,
-	type AudioElement,
-	type VideoElement,
-	type ImageElement,
-	type MaskableElement,
-	type RetimableElement,
-	type VisualElement,
-	type UploadAudioElement,
-} from "@/timeline";
+import type { AudioElement, CreateEffectElement, CreateGraphicElement, CreateImageElement, CreateLibraryAudioElement, CreateStickerElement, CreateTimelineElement, CreateUploadAudioElement, CreateVideoElement, ImageElement, MaskableElement, RetimableElement, SceneTracks, TextBackground, TextElement, TimelineElement, UploadAudioElement, VideoElement, VisualElement } from "@/model";
+import { MASKABLE_ELEMENT_TYPES, RETIMABLE_ELEMENT_TYPES, VISUAL_ELEMENT_TYPES } from "@/model";
 import { DEFAULTS } from "@/timeline/defaults";
 import type { MediaType } from "@/media/types";
 import { buildDefaultEffectInstance } from "@/effects";

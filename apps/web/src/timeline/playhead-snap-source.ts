@@ -1,9 +1,9 @@
-import type { SnapPoint } from "@/timeline/snapping";
+import type { TimelineSnapPoint } from "@/timeline/snapping";
 
 export function getPlayheadSnapPoints({
 	playheadTime,
 }: {
 	playheadTime: number;
-}): SnapPoint[] {
+}): TimelineSnapPoint[] {
 	return [{ time: playheadTime, type: "playhead" }];
 }

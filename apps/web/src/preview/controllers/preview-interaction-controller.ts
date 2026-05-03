@@ -15,19 +15,12 @@ import {
 import {
 	SNAP_THRESHOLD_SCREEN_PIXELS,
 	snapPosition,
-	type SnapLine,
+	type PreviewSnapLine,
 } from "@/preview/preview-snap";
 import type { TCanvasSize } from "@/project/types";
 import type { Transform } from "@/rendering";
 import { isVisualElement } from "@/timeline/element-utils";
-import type {
-	ElementRef,
-	SceneTracks,
-	TextElement,
-	TimelineElement,
-	TimelineTrack,
-	VisualElement,
-} from "@/timeline";
+import type { ElementRef, SceneTracks, TextElement, TimelineElement, TimelineTrack, VisualElement } from "@/model";
 
 const MIN_DRAG_DISTANCE = 0.5;
 const PRIMARY_POINTER_BUTTON = 0;
@@ -133,7 +126,7 @@ export interface PlaybackApi {
 
 export interface PreviewOptions {
 	isMaskMode: () => boolean;
-	onSnapLinesChange?: (lines: SnapLine[]) => void;
+	onSnapLinesChange?: (lines: PreviewSnapLine[]) => void;
 }
 
 export interface PreviewInteractionDeps {
@@ -554,7 +547,7 @@ export class PreviewInteractionController {
 				})
 			: {
 					snappedPosition: proposedPosition,
-					activeLines: [] as SnapLine[],
+					activeLines: [] as PreviewSnapLine[],
 				};
 
 		this.deps.preview.onSnapLinesChange?.(activeLines);

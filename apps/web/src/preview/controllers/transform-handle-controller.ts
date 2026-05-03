@@ -14,7 +14,7 @@ import {
 	snapScale,
 	snapScaleAxes,
 	type ScaleEdgePreference,
-	type SnapLine,
+	type PreviewSnapLine,
 } from "@/preview/preview-snap";
 import { isVisualElement } from "@/timeline/element-utils";
 import {
@@ -25,12 +25,7 @@ import {
 import type { ElementAnimations } from "@/animation/types";
 import type { Transform } from "@/rendering";
 import { resolveTransformAtTime } from "@/rendering/animation-values";
-import type {
-	ElementRef,
-	SceneTracks,
-	TimelineElement,
-	VisualElement,
-} from "@/timeline";
+import type { ElementRef, SceneTracks, TimelineElement, VisualElement } from "@/model";
 
 type Point = { readonly x: number; readonly y: number };
 type CanvasSize = { readonly width: number; readonly height: number };
@@ -137,7 +132,7 @@ export interface TimelineOps {
 }
 
 export interface PreviewOptions {
-	onSnapLinesChange?: (lines: SnapLine[]) => void;
+	onSnapLinesChange?: (lines: PreviewSnapLine[]) => void;
 }
 
 export interface TransformHandleDeps {
@@ -590,7 +585,7 @@ export class TransformHandleController {
 			screenPixels: SNAP_THRESHOLD_SCREEN_PIXELS,
 		});
 		const { snappedScale, activeLines } = this.deps.input.isShiftHeld()
-			? { snappedScale: scaleFactor, activeLines: [] as SnapLine[] }
+			? { snappedScale: scaleFactor, activeLines: [] as PreviewSnapLine[] }
 			: snapScale({
 					proposedScale: scaleFactor,
 					position: session.initialTransform.position,
@@ -670,12 +665,12 @@ export class TransformHandleController {
 					x: {
 						snappedScale: proposedScaleX,
 						snapDistance: Infinity,
-						activeLines: [] as SnapLine[],
+						activeLines: [] as PreviewSnapLine[],
 					},
 					y: {
 						snappedScale: proposedScaleY,
 						snapDistance: Infinity,
-						activeLines: [] as SnapLine[],
+						activeLines: [] as PreviewSnapLine[],
 					},
 				}
 			: snapScaleAxes({

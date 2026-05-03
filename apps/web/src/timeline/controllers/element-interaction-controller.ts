@@ -13,15 +13,15 @@ import { roundToFrame, type FrameRate } from "opencut-wasm";
 import { computeDropTarget } from "@/timeline/components/drop-target";
 import { getMouseTimeFromClientX } from "@/timeline/drag-utils";
 import { generateUUID } from "@/utils/id";
-import type { SnapPoint } from "@/timeline/snapping";
+import type { TimelineSnapPoint } from "@/timeline/snapping";
 import type {
-	DropTarget,
+	ElementId,
 	ElementRef,
-	ElementDragView,
 	SceneTracks,
 	TimelineElement,
 	TimelineTrack,
-} from "@/timeline";
+} from "@/model";
+import type { DropTarget, ElementDragView } from "@/timeline";
 
 const MOUSE_BUTTON_RIGHT = 2;
 
@@ -61,7 +61,7 @@ export interface TimelineOps {
 
 export interface SnapConfig {
 	isEnabled: () => boolean;
-	onChange?: (snapPoint: SnapPoint | null) => void;
+	onChange?: (snapPoint: TimelineSnapPoint | null) => void;
 }
 
 export interface ElementInteractionDeps {
@@ -84,7 +84,7 @@ type Point = { readonly x: number; readonly y: number };
 
 interface MousedownSnapshot {
 	readonly origin: Point;
-	readonly elementId: string;
+	readonly elementId: ElementId;
 	readonly trackId: string;
 	readonly startElementTime: number;
 	readonly clickOffsetTime: number;
@@ -429,7 +429,7 @@ export class ElementInteractionController {
 	private snapResult(
 		frameSnappedTime: number,
 		group: MoveGroup,
-	): { snappedTime: number; snapPoint: SnapPoint | null } {
+	): { snappedTime: number; snapPoint: TimelineSnapPoint | null } {
 		const { snap, input, scene, viewport, playback } = this.deps;
 
 		if (!snap.isEnabled() || input.isShiftHeld()) {

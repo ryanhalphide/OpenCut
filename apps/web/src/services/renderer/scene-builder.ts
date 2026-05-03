@@ -1,4 +1,4 @@
-import type { SceneTracks, TimelineTrack } from "@/timeline";
+import type { SceneTracks, TimelineTrack } from "@/model";
 import type { MediaAsset } from "@/media/types";
 import { RootNode } from "./nodes/root-node";
 import { VideoNode } from "./nodes/video-node";

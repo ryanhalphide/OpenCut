@@ -16,7 +16,7 @@ import {
 	getAnimationParamValueKind,
 } from "@/animation/animated-params";
 import type { ParamDefinition } from "@/params";
-import type { TimelineElement } from "@/timeline";
+import type { TimelineElement } from "@/model";
 
 export interface KeyframedParamPropertyResult {
 	hasAnimatedKeyframes: boolean;

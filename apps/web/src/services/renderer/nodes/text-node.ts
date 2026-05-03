@@ -1,5 +1,5 @@
 import { BaseNode } from "./base-node";
-import type { TextElement } from "@/timeline";
+import type { TextElement } from "@/model";
 import type { EffectPass } from "@/effects/types";
 import type { Transform } from "@/rendering";
 import { drawMeasuredTextLayout } from "@/text/primitives";

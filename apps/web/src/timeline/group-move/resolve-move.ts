@@ -1,4 +1,4 @@
-import type { SceneTracks } from "@/timeline";
+import type { SceneTracks } from "@/model";
 import { getTrackTypeForElementType } from "@/timeline/placement/compatibility";
 import { canPlaceTimeSpansOnTrack } from "@/timeline/placement/overlap";
 import type {

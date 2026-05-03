@@ -1,4 +1,4 @@
-import type { SceneTracks, TimelineElement, VideoTrack } from "@/timeline";
+import type { SceneTracks, TimelineElement, VideoTrack } from "@/model";
 
 export const MAIN_TRACK_NAME = "Main Track";
 

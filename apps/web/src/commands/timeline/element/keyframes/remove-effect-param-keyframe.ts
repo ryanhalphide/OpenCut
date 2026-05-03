@@ -3,7 +3,7 @@ import { Command, type CommandResult } from "@/commands/base-command";
 import { removeEffectParamKeyframe } from "@/animation/effect-param-channel";
 import { updateElementInSceneTracks } from "@/timeline";
 import { isVisualElement } from "@/timeline/element-utils";
-import type { SceneTracks } from "@/timeline";
+import type { SceneTracks } from "@/model";
 
 export class RemoveEffectParamKeyframeCommand extends Command {
 	private savedState: SceneTracks | null = null;

@@ -4,7 +4,7 @@ import type {
 	TProjectMetadata,
 	TTimelineViewState,
 } from "@/project/types";
-import type { TScene } from "@/timeline";
+import type { TScene } from "@/model";
 
 export interface StorageAdapter<T> {
 	get(key: string): Promise<T | null>;

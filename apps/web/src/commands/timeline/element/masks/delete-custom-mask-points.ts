@@ -6,7 +6,7 @@ import {
 } from "@/masks/custom-path";
 import type { CustomMask } from "@/masks/types";
 import { isMaskableElement, updateElementInSceneTracks } from "@/timeline";
-import type { MaskableElement, SceneTracks } from "@/timeline";
+import type { MaskableElement, SceneTracks } from "@/model";
 
 function deletePointsFromCustomMask({
 	mask,

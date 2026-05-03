@@ -1,13 +1,7 @@
 import type { EditorCore } from "@/core";
 import type { ElementBounds } from "@/preview/element-bounds";
 import type { ParamValues } from "@/params";
-import type {
-	SceneTracks,
-	TrackType,
-	TimelineTrack,
-	TimelineElement,
-	RetimeConfig,
-} from "@/timeline";
+import type { RetimeConfig, SceneTracks, TimelineElement, TimelineTrack, TrackType } from "@/model";
 import { calculateTotalDuration } from "@/timeline";
 import { TimelineDragSource } from "@/timeline/drag-source";
 import { findTrackInSceneTracks } from "@/timeline/track-element-update";

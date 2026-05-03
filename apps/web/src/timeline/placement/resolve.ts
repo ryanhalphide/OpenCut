@@ -1,4 +1,4 @@
-import type { SceneTracks, TrackType, TimelineTrack } from "@/timeline";
+import type { SceneTracks, TimelineTrack, TrackType } from "@/model";
 import {
 	getDefaultInsertIndexForTrack,
 	getHighestInsertIndexForTrack,

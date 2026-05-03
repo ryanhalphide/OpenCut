@@ -1,6 +1,6 @@
 import { useCallback } from "react";
 import { useEditor } from "@/editor/use-editor";
-import type { ElementRef } from "@/timeline/types";
+import type { ElementRef } from "@/model";
 
 export function useElementSelection() {
 	const editor = useEditor();

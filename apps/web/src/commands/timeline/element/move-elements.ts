@@ -4,7 +4,12 @@ import {
 	type CommandResult,
 } from "@/commands/base-command";
 import { EditorCore } from "@/core";
-import type { SceneTracks, TimelineElement, TimelineTrack } from "@/timeline";
+import {
+	elementId as toElementId,
+	type SceneTracks,
+	type TimelineElement,
+	type TimelineTrack,
+} from "@/model";
 import {
 	buildEmptyTrack,
 	validateElementTrackCompatibility,
@@ -117,7 +122,7 @@ export class MoveElementCommand extends Command {
 		return createElementSelectionResult(
 			this.moves.map(({ elementId, targetTrackId }) => ({
 				trackId: targetTrackId,
-				elementId,
+				elementId: toElementId(elementId),
 			})),
 		);
 	}

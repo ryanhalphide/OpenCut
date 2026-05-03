@@ -1,4 +1,4 @@
-import type { TrackType } from "@/timeline";
+import type { TrackType } from "@/model";
 import {
 	KEYFRAME_LANE_HEIGHT_PX,
 	TIMELINE_TRACK_GAP_PX,

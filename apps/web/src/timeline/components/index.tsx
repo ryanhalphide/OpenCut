@@ -35,8 +35,8 @@ import { TimelinePlayhead } from "./timeline-playhead";
 import { SelectionBox } from "@/selection/selection-box";
 import { useBoxSelect } from "@/selection/hooks/use-box-select";
 import { SnapIndicator } from "./snap-indicator";
-import type { SnapPoint } from "@/timeline/snapping";
-import type { TimelineTrack } from "@/timeline";
+import type { TimelineSnapPoint } from "@/timeline/snapping";
+import type { TimelineTrack } from "@/model";
 import {
 	TIMELINE_SCROLLBAR_SIZE_PX,
 	TIMELINE_CONTENT_TOP_PADDING_PX,
@@ -144,11 +144,11 @@ export function Timeline() {
 	const playheadRef = useRef<HTMLDivElement>(null);
 	const trackLabelsScrollRef = useRef<HTMLDivElement>(null);
 
-	const [currentSnapPoint, setCurrentSnapPoint] = useState<SnapPoint | null>(
+	const [currentSnapPoint, setCurrentSnapPoint] = useState<TimelineSnapPoint | null>(
 		null,
 	);
 
-	const handleSnapPointChange = useCallback((snapPoint: SnapPoint | null) => {
+	const handleSnapPointChange = useCallback((snapPoint: TimelineSnapPoint | null) => {
 		setCurrentSnapPoint(snapPoint);
 	}, []);
 

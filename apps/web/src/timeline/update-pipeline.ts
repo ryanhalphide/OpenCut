@@ -4,7 +4,7 @@ import {
 	getSourceSpanAtClipTime,
 	getTimelineDurationForSourceSpan,
 } from "@/retime";
-import type { RetimeConfig, SceneTracks, TimelineElement } from "@/timeline";
+import type { RetimeConfig, SceneTracks, TimelineElement } from "@/model";
 import { isRetimableElement } from "@/timeline";
 
 type ElementUpdateField = keyof TimelineElement | string;

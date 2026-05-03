@@ -1,11 +1,13 @@
 import { Command, type CommandResult } from "@/commands/base-command";
 import { EditorCore } from "@/core";
-import type {
-	CreateTimelineElement,
-	SceneTracks,
-	TimelineElement,
-	TrackType,
-} from "@/timeline";
+import {
+	elementId,
+	type CreateTimelineElement,
+	type ElementId,
+	type SceneTracks,
+	type TimelineElement,
+	type TrackType,
+} from "@/model";
 import { generateUUID } from "@/utils/id";
 import { requiresMediaId } from "@/timeline/element-utils";
 import type { MediaAsset } from "@/media/types";
@@ -29,13 +31,13 @@ export interface InsertElementParams {
 }
 
 export class InsertElementCommand extends Command {
-	private elementId: string;
+	private elementId: ElementId;
 	private savedState: SceneTracks | null = null;
 	private targetTrackId: string | null = null;
 
 	constructor({ element, placement }: InsertElementParams) {
 		super();
-		this.elementId = generateUUID();
+		this.elementId = elementId(generateUUID());
 		this.element = element;
 		this.placement = placement;
 	}

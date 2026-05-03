@@ -1,7 +1,7 @@
 import { NumberField } from "@/components/ui/number-field";
 import { useEditor } from "@/editor/use-editor";
 import { clamp, isNearlyEqual } from "@/utils/math";
-import type { VisualElement } from "@/timeline";
+import type { VisualElement } from "@/model";
 import {
 	Section,
 	SectionContent,

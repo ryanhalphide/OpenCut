@@ -1,5 +1,5 @@
 import { Command, type CommandResult } from "@/commands/base-command";
-import type { SceneTracks, TrackType } from "@/timeline";
+import type { SceneTracks, TrackType } from "@/model";
 import { generateUUID } from "@/utils/id";
 import { EditorCore } from "@/core";
 import {

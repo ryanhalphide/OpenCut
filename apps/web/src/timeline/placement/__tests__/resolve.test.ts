@@ -1,17 +1,18 @@
 import { describe, expect, test } from "bun:test";
-import type {
-	AudioElement,
-	AudioTrack,
-	GraphicElement,
-	GraphicTrack,
-	OverlayTrack,
-	SceneTracks,
-	TextElement,
-	TextTrack,
-	TimelineTrack,
-	VideoElement,
-	VideoTrack,
-} from "@/timeline";
+import {
+	elementId,
+	type AudioElement,
+	type AudioTrack,
+	type GraphicElement,
+	type GraphicTrack,
+	type OverlayTrack,
+	type SceneTracks,
+	type TextElement,
+	type TextTrack,
+	type TimelineTrack,
+	type VideoElement,
+	type VideoTrack,
+} from "@/model";
 import type { Transform } from "@/rendering";
 import { resolveTrackPlacement } from "@/timeline/placement";
 
@@ -61,10 +62,11 @@ function buildElement({
 	startTime: number;
 	duration: number;
 }): TestElement {
+	const idValue = elementId(id);
 	switch (type) {
 		case "audio":
 			return {
-				id,
+				id: idValue,
 				type: "audio",
 				name: id,
 				startTime,
@@ -77,7 +79,7 @@ function buildElement({
 			} satisfies AudioElement;
 		case "graphic":
 			return {
-				id,
+				id: idValue,
 				type: "graphic",
 				name: id,
 				startTime,
@@ -91,7 +93,7 @@ function buildElement({
 			} satisfies GraphicElement;
 		case "text":
 			return {
-				id,
+				id: idValue,
 				type: "text",
 				name: id,
 				startTime,
@@ -115,7 +117,7 @@ function buildElement({
 			} satisfies TextElement;
 		case "video":
 			return {
-				id,
+				id: idValue,
 				type: "video",
 				name: id,
 				startTime,

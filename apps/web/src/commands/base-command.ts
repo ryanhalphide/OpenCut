@@ -1,5 +1,5 @@
 import type { EditorSelectionPatch } from "@/selection/editor-selection";
-import type { ElementRef } from "@/timeline/types";
+import type { ElementRef } from "@/model";
 
 export interface CommandResult {
 	selection?: EditorSelectionPatch;

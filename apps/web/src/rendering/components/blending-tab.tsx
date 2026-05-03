@@ -20,7 +20,7 @@ import {
 	SelectValue,
 } from "@/components/ui/select";
 import type { BlendMode } from "@/rendering";
-import type { ElementType } from "@/timeline";
+import type { ElementType } from "@/model";
 import type { ElementAnimations } from "@/animation/types";
 import { HugeiconsIcon } from "@hugeicons/react";
 import { RainDropIcon } from "@hugeicons/core-free-icons";

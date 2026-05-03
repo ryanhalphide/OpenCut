@@ -1,14 +1,4 @@
-import type {
-	AudioTrack,
-	EffectTrack,
-	GraphicTrack,
-	OverlayTrack,
-	SceneTracks,
-	TextTrack,
-	TimelineElement,
-	TimelineTrack,
-	VideoTrack,
-} from "@/timeline";
+import type { AudioTrack, EffectTrack, GraphicTrack, OverlayTrack, SceneTracks, TextTrack, TimelineElement, TimelineTrack, VideoTrack } from "@/model";
 import { generateUUID } from "@/utils/id";
 import { buildEmptyTrack } from "./track-factory";
 import type { PlacementResult } from "./types";

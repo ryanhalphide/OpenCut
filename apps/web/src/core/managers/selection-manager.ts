@@ -6,7 +6,7 @@ import type {
 	EditorSelectionSnapshot,
 	SelectedMaskPointSelection,
 } from "@/selection/editor-selection";
-import type { ElementRef } from "@/timeline/types";
+import type { ElementRef } from "@/model";
 
 export class SelectionManager {
 	private selectedElements: ElementRef[] = [];

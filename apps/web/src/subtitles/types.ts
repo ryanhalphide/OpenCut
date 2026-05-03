@@ -1,4 +1,4 @@
-import type { TextBackground, TextElement } from "@/timeline";
+import type { TextBackground, TextElement } from "@/model";
 import type { CaptionChunk } from "@/transcription/types";
 
 export interface SubtitlePlacementStyle {

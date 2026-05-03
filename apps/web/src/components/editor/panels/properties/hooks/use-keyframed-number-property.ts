@@ -4,7 +4,7 @@ import {
 	hasKeyframesForPath,
 } from "@/animation";
 import type { AnimationPropertyPath, ElementAnimations } from "@/animation/types";
-import type { TimelineElement } from "@/timeline";
+import type { TimelineElement } from "@/model";
 import { upsertElementKeyframe } from "@/timeline/animation-properties";
 import { snapToStep } from "@/utils/math";
 import { usePropertyDraft } from "./use-property-draft";

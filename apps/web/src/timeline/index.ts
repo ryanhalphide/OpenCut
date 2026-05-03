@@ -1,4 +1,4 @@
-import type { SceneTracks } from "./types";
+import type { SceneTracks } from "@/model";
 
 export * from "./types";
 export * from "./drag";

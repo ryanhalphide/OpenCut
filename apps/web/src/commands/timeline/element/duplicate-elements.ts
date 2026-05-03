@@ -3,7 +3,13 @@ import {
 	createElementSelectionResult,
 	type CommandResult,
 } from "@/commands/base-command";
-import type { SceneTracks, TimelineElement } from "@/timeline";
+import {
+	elementId,
+	type ElementId,
+	type ElementRef,
+	type SceneTracks,
+	type TimelineElement,
+} from "@/model";
 import { generateUUID } from "@/utils/id";
 import { EditorCore } from "@/core";
 import { applyPlacement, resolveTrackPlacement } from "@/timeline/placement";
@@ -14,7 +20,7 @@ interface DuplicateElementsParams {
 }
 
 export class DuplicateElementsCommand extends Command {
-	private duplicatedElements: { trackId: string; elementId: string }[] = [];
+	private duplicatedElements: ElementRef[] = [];
 	private savedState: SceneTracks | null = null;
 	private elements: DuplicateElementsParams["elements"];
 
@@ -53,7 +59,7 @@ export class DuplicateElementsCommand extends Command {
 					continue;
 				}
 
-				const newId = generateUUID();
+				const newId = elementId(generateUUID());
 				newTrackElements.push(
 					buildDuplicateElement({
 						element,
@@ -107,7 +113,7 @@ export class DuplicateElementsCommand extends Command {
 		}
 	}
 
-	getDuplicatedElements(): { trackId: string; elementId: string }[] {
+	getDuplicatedElements(): ElementRef[] {
 		return this.duplicatedElements;
 	}
 }
@@ -118,7 +124,7 @@ function buildDuplicateElement({
 	startTime,
 }: {
 	element: TimelineElement;
-	id: string;
+	id: ElementId;
 	startTime: number;
 }): TimelineElement {
 	return {

@@ -2,7 +2,7 @@ import { EditorCore } from "@/core";
 import { Command, type CommandResult } from "@/commands/base-command";
 import { upsertPathKeyframe } from "@/animation";
 import { updateElementInSceneTracks } from "@/timeline";
-import type { SceneTracks } from "@/timeline";
+import type { SceneTracks } from "@/model";
 import { resolveAnimationTarget } from "@/timeline/animation-targets";
 import type {
 	AnimationPath,

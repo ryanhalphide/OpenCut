@@ -3,7 +3,7 @@
 import { useCallback, useEffect, useRef } from "react";
 import { usePreviewViewport } from "@/preview/components/preview-viewport";
 import { useEditor } from "@/editor/use-editor";
-import type { TextElement } from "@/timeline";
+import type { TextElement } from "@/model";
 import { DEFAULTS } from "@/timeline/defaults";
 import {
 	getElementLocalTime,

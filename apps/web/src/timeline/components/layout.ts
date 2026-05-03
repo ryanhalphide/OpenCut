@@ -1,4 +1,4 @@
-import type { TrackType } from "@/timeline";
+import type { TrackType } from "@/model";
 
 export const TIMELINE_TRACK_HEIGHTS_PX: Record<TrackType, number> = {
 	video: 65,

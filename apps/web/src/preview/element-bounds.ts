@@ -1,4 +1,4 @@
-import type { SceneTracks, TimelineElement } from "@/timeline";
+import type { ElementId, SceneTracks, TimelineElement } from "@/model";
 import type { MediaAsset } from "@/media/types";
 import { STICKER_INTRINSIC_SIZE_FALLBACK } from "@/stickers/intrinsic-size";
 import { DEFAULT_GRAPHIC_SOURCE_SIZE } from "@/graphics";
@@ -18,7 +18,7 @@ export interface ElementBounds {
 
 export interface ElementWithBounds {
 	trackId: string;
-	elementId: string;
+	elementId: ElementId;
 	element: TimelineElement;
 	bounds: ElementBounds;
 }

@@ -1,5 +1,5 @@
 import type { ElementBounds } from "@/preview/element-bounds";
-import type { SnapLine } from "@/preview/preview-snap";
+import type { PreviewSnapLine } from "@/preview/preview-snap";
 import { MIN_MASK_DIMENSION } from "@/masks/dimensions";
 import type { RectangleMaskParams } from "@/masks/types";
 
@@ -100,10 +100,10 @@ export function toGlobalMaskSnapLines({
 	bounds,
 	canvasSize,
 }: {
-	lines: SnapLine[];
+	lines: PreviewSnapLine[];
 	bounds: ElementBounds;
 	canvasSize: { width: number; height: number };
-}): SnapLine[] {
+}): PreviewSnapLine[] {
 	const centerX = bounds.cx - canvasSize.width / 2;
 	const centerY = bounds.cy - canvasSize.height / 2;
 

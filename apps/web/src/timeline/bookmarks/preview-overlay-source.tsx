@@ -1,4 +1,4 @@
-import type { Bookmark } from "@/timeline";
+import type { Bookmark } from "@/model";
 import {
 	EMPTY_PREVIEW_OVERLAY_SOURCE_RESULT,
 	type PreviewOverlayDefinition,

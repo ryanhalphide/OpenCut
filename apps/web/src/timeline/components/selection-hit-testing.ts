@@ -1,11 +1,9 @@
-import type { TimelineTrack } from "@/timeline";
+import type { ElementRef, TimelineTrack } from "@/model";
 import { timelineTimeToPixels } from "@/timeline/pixel-utils";
 import {
 	TIMELINE_CONTENT_TOP_PADDING_PX,
 } from "./layout";
 import { getCumulativeHeightBefore, getTrackHeight } from "./track-layout";
-
-type TimelineElementRef = { trackId: string; elementId: string };
 
 interface SelectionRectangle {
 	left: number;
@@ -89,14 +87,14 @@ export function resolveTimelineElementIntersections({
 	zoomLevel: number;
 	startPos: { x: number; y: number };
 	currentPos: { x: number; y: number };
-}): TimelineElementRef[] {
+}): ElementRef[] {
 	const selectionRectangle = getSelectionRectangleInContent({
 		container,
 		scrollContainer,
 		startPos,
 		endPos: currentPos,
 	});
-	const selectedElements: TimelineElementRef[] = [];
+	const selectedElements: ElementRef[] = [];
 
 	for (const [trackIndex, track] of tracks.entries()) {
 		const trackTop = getCumulativeHeightBefore({

@@ -1,4 +1,4 @@
-import type { MaskableElement, VisualElement } from "./types";
+import type { MaskableElement, VisualElement } from "@/model";
 import type { ParamValues } from "@/params";
 
 interface BaseDragData {

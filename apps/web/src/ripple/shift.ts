@@ -1,4 +1,4 @@
-import type { TimelineElement } from "@/timeline/types";
+import type { TimelineElement } from "@/model";
 
 export function rippleShiftElements<TElement extends TimelineElement>({
 	elements,

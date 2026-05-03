@@ -7,7 +7,7 @@ import {
 	type KeyframedParamPropertyResult,
 } from "@/components/editor/panels/properties/hooks/use-keyframed-param-property";
 import type { ParamDefinition, ParamValues } from "@/params";
-import type { GraphicElement } from "@/timeline";
+import type { GraphicElement } from "@/model";
 import {
 	graphicsRegistry,
 	registerDefaultGraphics,

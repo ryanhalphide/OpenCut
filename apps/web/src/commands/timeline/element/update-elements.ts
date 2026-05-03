@@ -1,6 +1,6 @@
 import { EditorCore } from "@/core";
 import { Command, type CommandResult } from "@/commands/base-command";
-import type { SceneTracks, TimelineElement } from "@/timeline";
+import type { SceneTracks, TimelineElement } from "@/model";
 import {
 	findTrackInSceneTracks,
 	updateElementInSceneTracks,

@@ -1,4 +1,4 @@
-import type { ElementType, TrackType } from "@/timeline";
+import type { ElementType, TrackType } from "@/model";
 
 const ELEMENT_TRACK_MAP: Record<ElementType, TrackType> = {
 	audio: "audio",

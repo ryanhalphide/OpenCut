@@ -1,5 +1,5 @@
 import type { EditorCore } from "@/core";
-import type { SceneTracks, TScene } from "@/timeline";
+import type { SceneTracks, TScene } from "@/model";
 import { storageService } from "@/services/storage/service";
 import {
 	getMainScene,

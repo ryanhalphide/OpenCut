@@ -1,6 +1,6 @@
 import { Command, type CommandResult } from "@/commands/base-command";
 import { EditorCore } from "@/core";
-import type { Bookmark, TScene } from "@/timeline";
+import type { Bookmark, TScene } from "@/model";
 import { updateSceneInArray } from "@/timeline/scenes";
 import {
 	getFrameTime,

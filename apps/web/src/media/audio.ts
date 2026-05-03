@@ -1,10 +1,4 @@
-import type {
-	AudioElement,
-	VideoElement,
-	LibraryAudioElement,
-	RetimeConfig,
-	SceneTracks,
-} from "@/timeline";
+import type { AudioElement, LibraryAudioElement, RetimeConfig, SceneTracks, VideoElement } from "@/model";
 import { shouldMaintainPitch } from "@/retime/rate";
 import type { MediaAsset } from "@/media/types";
 import { applyAudioMasteringToBuffer } from "@/media/audio-mastering";

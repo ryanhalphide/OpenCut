@@ -4,7 +4,7 @@ import {
 	type CommandResult,
 } from "@/commands/base-command";
 import { EditorCore } from "@/core";
-import type { SceneTracks, TimelineElement } from "@/timeline";
+import type { ElementRef, SceneTracks, TimelineElement } from "@/model";
 import type { ElementClipboardItem } from "@/clipboard";
 import { generateUUID } from "@/utils/id";
 import {
@@ -16,7 +16,7 @@ import { cloneAnimations } from "@/animation";
 
 export class PasteCommand extends Command {
 	private savedState: SceneTracks | null = null;
-	private pastedElements: { trackId: string; elementId: string }[] = [];
+	private pastedElements: ElementRef[] = [];
 	private readonly time: number;
 	private readonly clipboardItems: ElementClipboardItem[];
 
@@ -142,7 +142,7 @@ export class PasteCommand extends Command {
 		}
 	}
 
-	getPastedElements(): { trackId: string; elementId: string }[] {
+	getPastedElements(): ElementRef[] {
 		return this.pastedElements;
 	}
 }

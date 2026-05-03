@@ -1,7 +1,7 @@
 import { hasKeyframesForPath } from "@/animation/keyframe-query";
 import { resolveNumberAtTime } from "@/animation/values";
 import { VOLUME_DB_MAX, VOLUME_DB_MIN } from "./audio-constants";
-import type { TimelineElement } from "./types";
+import type { TimelineElement } from "@/model";
 const DEFAULT_STEP_SECONDS = 1 / 60;
 
 export type AudioCapableElement = Extract<

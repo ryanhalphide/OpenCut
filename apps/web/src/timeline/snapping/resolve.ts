@@ -1,4 +1,4 @@
-import type { SnapPoint, SnapResult } from "./types";
+import type { TimelineSnapPoint, TimelineSnapResult } from "./types";
 
 export function resolveTimelineSnap({
 	targetTime,
@@ -6,10 +6,10 @@ export function resolveTimelineSnap({
 	maxSnapDistance,
 }: {
 	targetTime: number;
-	snapPoints: SnapPoint[];
+	snapPoints: TimelineSnapPoint[];
 	maxSnapDistance: number;
-}): SnapResult {
-	let closestSnapPoint: SnapPoint | null = null;
+}): TimelineSnapResult {
+	let closestSnapPoint: TimelineSnapPoint | null = null;
 	let closestDistance = Infinity;
 
 	for (const snapPoint of snapPoints) {
